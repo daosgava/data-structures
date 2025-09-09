@@ -25,25 +25,25 @@ console.log(
   `${person}'s parents: ${getParents(person)} | ${person}'s children: ${getChildren(person)}`,
 );
 
-const findAllByFunction = (name, fn) => {
-  const ancestors = [];
-  for (const parent of fn(name)) {
-    const relatives = findAllByFunction(parent, fn);
+const findRelativesByFunction = (name, fn) => {
+  const relatives = [];
+  for (const relative of fn(name)) {
+    const family = findRelativesByFunction(relative, fn);
 
-    ancestors.push(parent, ...relatives);
+    relatives.push(relative, ...family);
   }
 
-  return ancestors;
+  return relatives;
 };
 
 const person2 = "miguel";
 
 console.log(
-  `${person2}'s ancestors: ${findAllByFunction(person2, getParents)}`,
+  `${person2}'s ancestors: ${findRelativesByFunction(person2, getParents)}`,
 );
 
 const person3 = "alice";
 
 console.log(
-  `${person3}'s decendants: ${findAllByFunction(person3, getChildren)}`,
+  `${person3}'s decendants: ${findRelativesByFunction(person3, getChildren)}`,
 );
