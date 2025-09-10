@@ -47,3 +47,17 @@ const person3 = "alice";
 console.log(
   `${person3}'s decendants: ${findRelativesByFunction(person3, getChildren)}`,
 );
+
+const findSiblings = (name) => {
+  const siblings = [];
+  for (const child of getChildren(getParents(name)[0])) {
+    if (child !== name) {
+      siblings.push(child);
+    }
+  }
+  return siblings;
+};
+
+const person4 = "miguel";
+
+console.log(`${person4}'s siblings: ${findSiblings(person4)}`);

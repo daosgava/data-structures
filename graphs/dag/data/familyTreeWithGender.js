@@ -1,4 +1,4 @@
-export const family = {
+export const familyWG = {
   gabriel: { parents: [], children: ["john"], gender: "male" },
   paola: { parents: [], children: ["john"], gender: "female" },
   john: {

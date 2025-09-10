@@ -9,7 +9,7 @@ export const family = {
   alice: { parents: ["john", "mary"], children: ["peter", "linda"] },
   peter: { parents: ["alice"], children: [] },
   linda: { parents: ["alice"], children: [] },
-  juan: { parents: ["alice"], children: [] },
+  juan: { parents: ["mary", "john"], children: [] },
   alex: { parents: ["mary", "john"], children: [] },
   miguel: { parents: ["mary", "john"], children: [] },
 };
