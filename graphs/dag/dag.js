@@ -1,4 +1,5 @@
-import { family } from "./data/familyTree.js";
+// import { family } from "./data/familyTree.js";
+import { familyWG as family } from "./data/familyTreeWithGender.js";
 
 // Directed Acyclic Graph
 
@@ -61,3 +62,20 @@ const findSiblings = (name) => {
 const person4 = "miguel";
 
 console.log(`${person4}'s siblings: ${findSiblings(person4)}`);
+
+const findSiblingsbyGender = (name, gender) => {
+  const siblings = [];
+  for (const child of getChildren(getParents(name)[0])) {
+    if (child !== name && family[child].gender === gender) {
+      siblings.push(child);
+    }
+  }
+  return siblings;
+};
+
+const person5 = "juan";
+const gender = "female";
+
+console.log(
+  `${person5}'s ${gender} siblings: ${findSiblingsbyGender(person5, gender)}`,
+);

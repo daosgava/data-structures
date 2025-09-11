@@ -18,7 +18,7 @@ export const familyWG = {
   },
   peter: { parents: ["alice"], children: [], gender: "male" },
   linda: { parents: ["alice"], children: [], gender: "female" },
-  juan: { parents: ["alice"], children: [], gender: "male" },
+  juan: { parents: ["john", "mary"], children: [], gender: "male" },
   alex: { parents: ["mary", "john"], children: [], gender: "male" },
   miguel: { parents: ["mary", "john"], children: [], gender: "male" },
 };
