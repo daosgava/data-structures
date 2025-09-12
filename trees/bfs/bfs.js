@@ -14,6 +14,3 @@ export const bfs = (root, target) => {
 
   return false;
 };
-
-const target = 5;
-console.log(`BFS: Does ${target} exist?`, bfs(tree.root, target));
