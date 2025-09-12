@@ -1,7 +1,7 @@
 import { tree } from "../data/tree.js";
 
 // Breadth-First Search
-const bfs = (root, target) => {
+export const bfs = (root, target) => {
   const queue = [root];
 
   while (queue.length > 0) {

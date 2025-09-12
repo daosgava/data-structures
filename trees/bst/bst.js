@@ -1,7 +1,5 @@
-import { tree } from "../data/binaryTree.js";
-
 // Binary Search tree
-const bst = (root, target) => {
+export const bst = (root, target) => {
   if (!root?.value) return false;
   if (root.value === target) return true;
 
@@ -9,6 +7,3 @@ const bst = (root, target) => {
 
   return bst(root.right, target);
 };
-
-const target = 15;
-console.log(`BST: Does ${target} exist?`, bst(tree.root, target));
