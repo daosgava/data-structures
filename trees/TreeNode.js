@@ -8,7 +8,7 @@ export class TreeNode {
   static printTree(node, prefix = "", isLeft) {
     if (!node?.value) return;
 
-    const current = isLeft ? "|-" : "|_";
+    const current = "|-";
     console.log(`${prefix}${current}${node.value}`);
     const tab = isLeft ? "|  " : "   ";
     const nextPrefix = prefix + tab;
