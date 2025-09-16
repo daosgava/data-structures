@@ -1,5 +1,5 @@
 import assert from "node:assert";
-import test, { describe } from "node:test";
+import test, { before, describe } from "node:test";
 import { TreeNode } from "./TreeNode.js";
 import { dfs } from "./dfs/dfs.js";
 import { bfs } from "./bfs/bfs.js";
@@ -17,6 +17,11 @@ root.right.right.left.left = new TreeNode(4);
 root.right.right.right = new TreeNode(9);
 
 describe("TreeNode", () => {
+  before(() => {
+    console.log("🌳 Tree 🌳");
+    TreeNode.printTree(root);
+  });
+
   test("dfs with TreeNode. It finds number 7", () => {
     const foundNumber = dfs(root, 7);
     assert.strictEqual(foundNumber, true);
@@ -25,9 +30,5 @@ describe("TreeNode", () => {
   test("bfs with TreeNode. It doesn't find number 10", () => {
     const foundNumber = bfs(root, 10);
     assert.strictEqual(foundNumber, false);
-  });
-
-  test("print tree", () => {
-    TreeNode.printTree(root);
   });
 });
