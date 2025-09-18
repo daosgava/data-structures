@@ -2,13 +2,13 @@ import { family } from "./data/familyTree.js";
 
 // Directed Acyclic Graph
 /*
-  Gabriel   Paola
+Gabriel   Paola
     |_______|
         |
-       John---Mary
+      John-----Mary
             |
-    ________|_______
-    |   |    |     |
+    ________|_________
+    |     |    |     |
   Alice Juan Alex Miguel
   __|__
   |   |
